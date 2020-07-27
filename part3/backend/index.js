@@ -7,6 +7,8 @@ app.use(express.json())
 app.use(cors())
 app.use(morgan('combined'))
 
+app.use(express.static('build'))
+
 function generateId() {
   return Math.floor(Math.random() * Math.floor(9999999));
 }
